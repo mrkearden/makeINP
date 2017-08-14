@@ -14,6 +14,7 @@ import java.awt.Desktop;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import javax.swing.JOptionPane;
 /**
  *
  * @author dipstick
@@ -361,6 +362,24 @@ public class MainForm extends javax.swing.JFrame {
         
         TxtArea.append("Finish\n");
         TxtArea.update(TxtArea.getGraphics());
+        
+        Object[] options = {"Yes",
+                    "No",
+                    };
+        int n = JOptionPane.showOptionDialog(null,
+    "Finished ,Would you Like to Exit ",
+    
+    "Exit Program Yes/No",
+    JOptionPane.YES_NO_CANCEL_OPTION,
+    JOptionPane.QUESTION_MESSAGE,
+    null,
+    options,
+    options[1]);
+	//System.out.println("n:"+n);
+      if (n == 0) {
+           System.exit(0);
+     }
+      
         
     }//GEN-LAST:event_btnGOActionPerformed
       

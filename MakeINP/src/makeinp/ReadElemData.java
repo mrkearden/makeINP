@@ -61,6 +61,10 @@ public class ReadElemData {
                nnperelem=Integer.valueOf(snnpelem.trim());
            
            textData = textReader.readLine();
+           if (textData.equals("         0         1         1")) {
+                   textData = textReader.readLine();
+                   //System.out.println("Found one in elem data");
+               }
            
            if (nnperelem ==8) {
                if (iflag == 0){
@@ -102,6 +106,10 @@ public class ReadElemData {
                nnperelem=Integer.valueOf(snnpelem.trim());
                //System.out.println(nnperelem);
            textData = textReader.readLine();
+           if (textData.equals("         0         1         1")) {
+                   textData = textReader.readLine();
+                   //System.out.println("Found one in elem data");
+               }
            
            if (nnperelem ==3) {
                if (iflag == 0){
@@ -132,7 +140,10 @@ public class ReadElemData {
                nnperelem=Integer.valueOf(snnpelem.trim());
                //System.out.println(nnperelem);
            textData = textReader.readLine();
-           
+           if (textData.equals("         0         1         1")) {
+                   textData = textReader.readLine();
+                   //System.out.println("Found one in elem data");
+               }
            if (nnperelem ==6) {
                if (iflag == 0){
                textElem[i][0]="*element,type=s6,elset=shells\n";
@@ -168,7 +179,10 @@ public class ReadElemData {
                nnperelem=Integer.valueOf(snnpelem.trim());
                //System.out.println(nnperelem);
            textData = textReader.readLine();
-           
+           if (textData.equals("         0         1         1")) {
+                   textData = textReader.readLine();
+                   //System.out.println("Found one in elem data");
+               }
            if (nnperelem ==2) {
                if (iflag == 0){
                textElem[i][0]="*element,type=b32,elset=beams\n";
@@ -196,7 +210,10 @@ public class ReadElemData {
                nnperelem=Integer.valueOf(snnpelem.trim());
                //System.out.println(nnperelem);
            textData = textReader.readLine();
-           
+           if (textData.equals("         0         1         1")) {
+                   textData = textReader.readLine();
+                   //System.out.println("Found one in elem data");
+               }
            if (nnperelem ==3) {
                if (iflag == 0){
                textElem[i][0]="*element,type=b32,elset=beams\n";
@@ -225,7 +242,10 @@ public class ReadElemData {
                nnperelem=Integer.valueOf(snnpelem.trim());
                //System.out.println(nnperelem);
            textData = textReader.readLine();
-           
+           if (textData.equals("         0         1         1")) {
+                   textData = textReader.readLine();
+                   //System.out.println("Found one in elem data");
+               }
            if (nnperelem ==4) {
                if (iflag == 0){
                textElem[i][0]="*element,type=s4,elset=quads\n";
@@ -256,7 +276,10 @@ public class ReadElemData {
                nnperelem=Integer.valueOf(snnpelem.trim());
            
            textData = textReader.readLine();
-           
+           if (textData.equals("         0         1         1")) {
+                   textData = textReader.readLine();
+                   //System.out.println("Found one in elem data");
+               }
            if (nnperelem ==8) {
                if (iflag == 0){
                textElem[i][0]="*element,type=s8,elset=quads\n";
@@ -294,7 +317,10 @@ public class ReadElemData {
                nnperelem=Integer.valueOf(snnpelem.trim());
                //System.out.println(nnperelem);
            textData = textReader.readLine();
-           
+           if (textData.equals("         0         1         1")) {
+                   textData = textReader.readLine();
+                   //System.out.println("Found one in elem data");
+               }
            if (nnperelem ==6) {
                if (iflag == 0){
                textElem[i][0]="*element,type=c3d6,elset=wedges\n";
@@ -329,7 +355,10 @@ public class ReadElemData {
                nnperelem=Integer.valueOf(snnpelem.trim());
                //System.out.println(nnperelem);
            textData = textReader.readLine();
-           
+           if (textData.equals("         0         1         1")) {
+                   textData = textReader.readLine();
+                   //System.out.println("Found one in elem data");
+               }
            if (nnperelem ==20) {
                if (iflag == 0){
                textElem[i][0]="*element,type=c3d20,elset=bricks\n";
@@ -393,7 +422,10 @@ public class ReadElemData {
                nnperelem=Integer.valueOf(snnpelem.trim());
                //System.out.println(nnperelem);
            textData = textReader.readLine();
-           
+           if (textData.equals("         0         1         1")) {
+                   textData = textReader.readLine();
+                   //System.out.println("Found one in elem data");
+               }
            if (nnperelem ==15) {
                if (iflag == 0){
                textElem[i][0]="*element,type=c3d15,elset=wedges\n";
@@ -446,7 +478,10 @@ public class ReadElemData {
                nnperelem=Integer.valueOf(snnpelem.trim());
                //System.out.println(nnperelem);
            textData = textReader.readLine();
-           
+           if (textData.equals("         0         1         1")) {
+                   textData = textReader.readLine();
+                   //System.out.println("Found one in elem data");
+               }
            if (nnperelem ==10) {
                if (iflag == 0){
                textElem[i][0]="*element,type=c3d10,elset=solids\n";

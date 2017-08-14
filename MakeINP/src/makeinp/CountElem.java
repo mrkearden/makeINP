@@ -65,6 +65,10 @@ public class CountElem {
            j=1;
            while (j <= numlines) {
                aLine = bf.readLine();
+               if (aLine.equals("         0         1         1")) {
+                   aLine = bf.readLine();
+                   //System.out.println("Found one");
+               }
                j++;
            }
           
