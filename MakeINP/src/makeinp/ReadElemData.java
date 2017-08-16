@@ -102,6 +102,8 @@ public class ReadElemData {
  // Process triangles if found
            if (ifed.trim().equals("41") || ifed.trim().equals("91")){
                tflag=1;
+               // set to 41 so the rest of the app works
+               ifed="41";
                //System.out.println(ifed);
               // MainForm ntext = new MainForm();
               // ntext.Update(ifed);
@@ -137,6 +139,8 @@ public class ReadElemData {
  // Process triangles if found
            if (ifed.trim().equals("42") || ifed.trim().equals("92")){
                tflag=1;
+               // set to 42 so the rest of the app works
+               ifed="42";
                //System.out.println(ifed);
               // MainForm ntext = new MainForm();
               // ntext.Update(ifed);
@@ -177,6 +181,8 @@ public class ReadElemData {
  // Process beams if found
            if (ifed.trim().equals("11") || ifed.trim().equals("21")){
                tflag=1;
+               // set to 11 so the rest of the app works
+               ifed="11";
                //System.out.println(ifed);
               // MainForm ntext = new MainForm();
               // ntext.Update(ifed);
@@ -208,6 +214,8 @@ public class ReadElemData {
  // Process beams if found
            if (ifed.trim().equals("22") || ifed.trim().equals("24")){
                tflag=1;
+               // set to 22 so the rest of the app works
+               ifed="22";
                //System.out.println(ifed);
               // MainForm ntext = new MainForm();
               // ntext.Update(ifed);
@@ -241,6 +249,8 @@ public class ReadElemData {
  // Process quads if found
            if (ifed.trim().equals("44") || ifed.trim().equals("94")){
                tflag=1;
+               // set to 44 so the rest of the app works
+               ifed="44";
                //System.out.println(ifed);
               // MainForm ntext = new MainForm();
               // ntext.Update(ifed);
@@ -276,6 +286,8 @@ public class ReadElemData {
  // Process Bricks if found
            if (ifed.trim().equals("45") || ifed.trim().equals("95")){
                tflag=1;
+               // set to 45 so the rest of the app works
+               ifed="45";
                //System.out.println(ifed);
                //MainForm ntext = new MainForm();
                //ntext.Update(ifed);
