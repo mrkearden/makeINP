@@ -25,7 +25,7 @@ public class ReadGroup {
         
         String dheader="    -1";
         String nheader="  2467";
-        
+        int iflag=0;
        FileReader file_to_read = new FileReader(path);
        BufferedReader bf = new BufferedReader(file_to_read);
 
@@ -37,14 +37,24 @@ public class ReadGroup {
        int i=0;
        while (i < 6000000) {
           aLine = bf.readLine();
+          if (aLine == null) {
+           //System.out.println("No groups found");
+           iflag=1;
+           break; } 
           if (aLine.equals(nheader)) {
               break;
           }
           i++;
        }
+       if (iflag == 1) {
+            print_line.close();
+            return nnodes;
+       }
+       
        int nitems;
        int j=0;while(j < 50000) {
        aLine =bf.readLine();
+        
        if (aLine.equals(dheader)) {
               break;
           }

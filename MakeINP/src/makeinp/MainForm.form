@@ -70,7 +70,7 @@
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="btnGO" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="179" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -84,15 +84,17 @@
                   <Component id="btnGetUnvFile" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnOpenUnv" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="txtUnvFile" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtUnvFile" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnGO" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnGetInpFile" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnOpenInp" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnGO" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="txtInpFile" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -121,7 +123,7 @@
                   </Group>
                   <Component id="jScrollPane1" min="-2" pref="416" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="30" max="32767" attributes="0"/>
+              <EmptySpace pref="29" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

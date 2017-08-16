@@ -183,7 +183,7 @@ public class MainForm extends javax.swing.JFrame {
                             .addComponent(txtUnvFile, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnGO)
-                        .addGap(128, 128, 128))))
+                        .addGap(179, 179, 179))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -192,14 +192,15 @@ public class MainForm extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGetUnvFile)
                     .addComponent(btnOpenUnv))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtUnvFile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtUnvFile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnGO))
+                .addGap(19, 19, 19)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGetInpFile)
-                    .addComponent(btnOpenInp)
-                    .addComponent(btnGO))
-                .addGap(18, 18, 18)
+                    .addComponent(btnOpenInp))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtInpFile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -226,7 +227,7 @@ public class MainForm extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(C10nTet))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 416, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         pack();
@@ -330,10 +331,12 @@ public class MainForm extends javax.swing.JFrame {
          TxtArea.update(TxtArea.getGraphics());
          
         // Write Node Data Starting with new file
+        if (nnode > 1) {
         WriteNodeInp inpdata = new WriteNodeInp();
         inpdata.writeNode(f2, false, aryLine, nnode);
         TxtArea.append("Wrote Nodes\n");
         TxtArea.update(TxtArea.getGraphics());
+        }
         //Append Element datasets
         
         FileRdNumElem elfile = new FileRdNumElem();
@@ -341,9 +344,11 @@ public class MainForm extends javax.swing.JFrame {
         //System.out.println(nelem);
         TxtArea.append("Number Elements:"+nelem+"\n");
         TxtArea.update(TxtArea.getGraphics());
+        
+        if (nelem > 1) {
         TxtArea.append("Reading Element Data\n");
         TxtArea.update(TxtArea.getGraphics());
-        
+                
         ReadElemData edata = new ReadElemData();
         String[][] eleLine = edata.OpenElemFile(f1, nelem, Getbtn);
         TxtArea.append("Writing Element Data\n");
@@ -353,12 +358,17 @@ public class MainForm extends javax.swing.JFrame {
         inpelem.writeElem(f2, true, eleLine, nelem);
         TxtArea.append("Wrote Elements\n");
         TxtArea.update(TxtArea.getGraphics());
+        }
         
         ReadGroup gdata = new ReadGroup();
-        gdata.readgdata(f1, f2);
-        
+        int ngroups = gdata.readgdata(f1, f2);
+        if (ngroups > 1){
         TxtArea.append("Wrote Groups\n");
         TxtArea.update(TxtArea.getGraphics());
+        } else{
+            TxtArea.append("No Groups Found\n");
+            TxtArea.update(TxtArea.getGraphics());
+        }
         
         TxtArea.append("Finish\n");
         TxtArea.update(TxtArea.getGraphics());
@@ -387,6 +397,7 @@ public class MainForm extends javax.swing.JFrame {
                 System.out.println( e.getMessage() );
             }
     }
+    
     /**
      * @param args the command line arguments
      */
