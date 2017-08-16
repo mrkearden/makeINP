@@ -44,7 +44,7 @@ public class ReadElemData {
            textElem[i][1] = "1";
            tflag=0;
            elabel = textReader.readLine();
-           System.out.println(elabel);
+           //System.out.println(elabel);
            snnpelem=elabel.substring(51, 60);
            ifed = elabel.substring(11,21);
            //System.out.println(ifed+ iflag);
@@ -102,8 +102,6 @@ public class ReadElemData {
  // Process triangles if found
            if (ifed.trim().equals("41") || ifed.trim().equals("91")){
                tflag=1;
-               // set to 41 so the rest of the app works
-               ifed="41";
                //System.out.println(ifed);
               // MainForm ntext = new MainForm();
               // ntext.Update(ifed);
@@ -121,7 +119,8 @@ public class ReadElemData {
            if (nnperelem ==3) {
                if (iflag == 0){
                textElem[i][0]="*element,type=s3,elset=trias\n";
-               iflag=41;
+               if (ifed.trim().equals("41")) {iflag=41;}
+               if (ifed.trim().equals("91")) {iflag=91;}
                }
                else {textElem[i][0]="";}
                n[1] = textData.substring(0,11);
@@ -139,8 +138,6 @@ public class ReadElemData {
  // Process triangles if found
            if (ifed.trim().equals("42") || ifed.trim().equals("92")){
                tflag=1;
-               // set to 42 so the rest of the app works
-               ifed="42";
                //System.out.println(ifed);
               // MainForm ntext = new MainForm();
               // ntext.Update(ifed);
@@ -157,7 +154,8 @@ public class ReadElemData {
            if (nnperelem ==6) {
                if (iflag == 0){
                textElem[i][0]="*element,type=s6,elset=shells\n";
-               iflag=42;
+               if (ifed.trim().equals("42")) {iflag=42;}
+               if (ifed.trim().equals("92")) {iflag=92;}
                }
                else {textElem[i][0]="";}
               n[1] = textData.substring(0,11);
@@ -181,8 +179,6 @@ public class ReadElemData {
  // Process beams if found
            if (ifed.trim().equals("11") || ifed.trim().equals("21")){
                tflag=1;
-               // set to 11 so the rest of the app works
-               ifed="11";
                //System.out.println(ifed);
               // MainForm ntext = new MainForm();
               // ntext.Update(ifed);
@@ -198,7 +194,8 @@ public class ReadElemData {
            if (nnperelem ==2) {
                if (iflag == 0){
                textElem[i][0]="*element,type=b32,elset=beams\n";
-               iflag=11;
+               if (ifed.trim().equals("11")) {iflag=11;}
+               if (ifed.trim().equals("21")) {iflag=21;}
                }
                else {textElem[i][0]="";}
                n[1] = textData.substring(0,11);
@@ -214,8 +211,6 @@ public class ReadElemData {
  // Process beams if found
            if (ifed.trim().equals("22") || ifed.trim().equals("24")){
                tflag=1;
-               // set to 22 so the rest of the app works
-               ifed="22";
                //System.out.println(ifed);
               // MainForm ntext = new MainForm();
               // ntext.Update(ifed);
@@ -231,7 +226,8 @@ public class ReadElemData {
            if (nnperelem ==3) {
                if (iflag == 0){
                textElem[i][0]="*element,type=b32,elset=beams\n";
-               iflag=22;
+               if (ifed.trim().equals("22")) {iflag=22;}
+               if (ifed.trim().equals("24")) {iflag=24;}
                }
                else {textElem[i][0]="";}
                n[1] = textData.substring(0,11);
@@ -249,8 +245,6 @@ public class ReadElemData {
  // Process quads if found
            if (ifed.trim().equals("44") || ifed.trim().equals("94")){
                tflag=1;
-               // set to 44 so the rest of the app works
-               ifed="44";
                //System.out.println(ifed);
               // MainForm ntext = new MainForm();
               // ntext.Update(ifed);
@@ -266,7 +260,8 @@ public class ReadElemData {
            if (nnperelem ==4) {
                if (iflag == 0){
                textElem[i][0]="*element,type=s4,elset=quads\n";
-               iflag=44;
+               if (ifed.trim().equals("44")) {iflag=44;}
+               if (ifed.trim().equals("94")) {iflag=94;}
                }
                else {textElem[i][0]="";}
               n[1] = textData.substring(0,11);
@@ -286,8 +281,6 @@ public class ReadElemData {
  // Process Bricks if found
            if (ifed.trim().equals("45") || ifed.trim().equals("95")){
                tflag=1;
-               // set to 45 so the rest of the app works
-               ifed="45";
                //System.out.println(ifed);
                //MainForm ntext = new MainForm();
                //ntext.Update(ifed);
@@ -303,7 +296,8 @@ public class ReadElemData {
            if (nnperelem ==8) {
                if (iflag == 0){
                textElem[i][0]="*element,type=s8,elset=quads\n";
-               iflag=45;
+               if (ifed.trim().equals("45")) {iflag=45;}
+               if (ifed.trim().equals("95")) {iflag=95;}
                }
                else {textElem[i][0]="";}
                n[1] = textData.substring(0,11);
